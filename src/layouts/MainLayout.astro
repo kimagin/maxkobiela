@@ -12,9 +12,9 @@ const { title } = Astro.props as Props;
 
 <html lang="en">
   <BaseHead {title} />
-  <body class="max-w-7xl mx-auto font-sans">
+  <body class="mx-auto relative">
     <Header {title} />
-    <main class="min-h-screen max-w-extreme">
+    <main class="min-h-screen max-w-extreme flex">
       <slot />
     </main>
     <Footer />

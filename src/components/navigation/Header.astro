@@ -3,11 +3,13 @@ import Logo from "../assets/Logo.astro";
 import Links from "./Links.astro";
 ---
 
-<header class="relative flex flex-row justify-between items-center px-6 py-4">
+<header
+  class="absolute top-0 z-50 w-full bg-white flex flex-row justify-between items-center px-6 py-4"
+>
   <div class="mx-auto">
     <Logo />
   </div>
-  <div class="absolute flex items-center w-fit h-full right-3">
+  <nav class="absolute flex items-center w-fit h-full right-6">
     <Links />
-  </div>
+  </nav>
 </header>
