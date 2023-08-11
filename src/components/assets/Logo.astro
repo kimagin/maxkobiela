@@ -1,0 +1,19 @@
+---
+export interface Props {
+  src?: string;
+  alt?: string;
+  width?: number;
+}
+
+const {
+  src = "./images/logo-dark.svg",
+  alt,
+  width = 100,
+} = Astro.props as Props;
+---
+
+<a href="/">
+  <span>
+    <img {src} {alt} {width} />
+  </span>
+</a>
