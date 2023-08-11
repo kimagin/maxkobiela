@@ -1,7 +1,7 @@
 ---
-const links = ["home", "about", "contact"];
+const links = ["about", "contact"];
 ---
 
-<div>
-  <h2>the links</h2>
-</div>
+<ul class="flex space-x-4 text-md font-semibold tracking-wide">
+  {links.map((item) => <li>{item}</li>)}
+</ul>
