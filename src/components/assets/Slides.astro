@@ -3,15 +3,25 @@ const slides = await Astro.glob("../../img/slideshow/*.webp");
 const image = slides[0].default;
 ---
 
-<div class="flex min-h-full flex-col">
-  <div class="-translate-x-[15%] flex object-cover max-w-full w-auto flex-1">
+<div class="flex flex-col w-full">
+  <div class="flex-1 overflow-hidden -translate-x-[15%]">
     <img class="w-full h-full object-cover" src={image} alt="" />
   </div>
   <div class="mx-auto flex flex-col h-[20%] p-6 text-sm items-center">
     <h1>Kolekcja mebli tapicerowanych TRIPLE, LEFIOLA, PL</h1>
     <h3 class="text-xs">D. Design/Wzornictwo meblowe</h3>
-    <div class="mt-4">
+    <div class="mt-4 flex space-x-2">
       <span class="w-1 h-1 block bg-black rounded-full"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
+      <span class="w-1 h-1 block bg-black rounded-full opacity-25"></span>
     </div>
   </div>
 </div>
