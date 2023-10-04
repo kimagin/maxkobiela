@@ -12,8 +12,14 @@ import {
 
 import Alpine from 'alpinejs'
 import heroSlideShow from './heroSlideShow'
+import logic from './logic'
+
+import intersect from '@alpinejs/intersect'
+
+Alpine.plugin(intersect)
 
 Alpine.data('HSlide', heroSlideShow)
+Alpine.data('Logic', logic)
 
 window.Alpine = Alpine
 
