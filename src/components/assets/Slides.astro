@@ -7,14 +7,17 @@ const slides = await Astro.glob('../../img/slideshow/*.webp')
   x-data="HSlide"
   x-intersect:enter="toggleHeaderState('leave')"
   x-intersect:leave="toggleHeaderState('enter')">
-  <div class="flex-1 overflow-hidden p-6">
+  <div
+    class="flex-1 overflow-hidden p-6"
+    id="heroImage">
     <img
       class="w-full h-full object-cover rounded-xl"
       src="../../img/slideshow/img--01.webp"
       alt=""
     />
   </div>
-  <div class="mx-auto flex flex-col h-fit p-6 text-sm items-center">
+  <div
+    class="mx-auto flex flex-col h-fit p-6 text-sm items-center w-full z-50 bg-stone-50">
     <h1>Kolekcja mebli tapicerowanych <b>TRIPLE</b>, <b>LEFIOLA</b>, PL</h1>
     <h1 x-text="message"></h1>
     <h3 class="text-xs">D. Design/Wzornictwo meblowe</h3>
