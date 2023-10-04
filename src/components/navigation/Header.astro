@@ -1,6 +1,8 @@
 ---
 import Logo from '../assets/Logo.astro'
 import Links from './Links.astro'
+import CTA from './CTA.astro'
+import Icon from 'astro-iconify'
 ---
 
 <!-- Header on the main Page -->
@@ -8,10 +10,16 @@ import Links from './Links.astro'
   x-show="!headerVisible"
   class="absolute z-50 w-full flex flex-col justify-center items-center py-24">
   <div class="mx-auto w-fit">
-    <Logo width={180} />
+    <Logo width={210} />
   </div>
-  <nav class="absolute flex items-center w-fit right-24 text-white/70">
+  <nav
+    class="absolute flex items-center w-fit right-24 text-white/70 space-x-4">
     <Links />
+    <CTA />
+    <Icon
+      class="h-8 mb-px"
+      name="grommet-icons:sun"
+    />
   </nav>
 </header>
 
@@ -30,7 +38,7 @@ import Links from './Links.astro'
   <div class="mx-auto w-fit">
     <Logo
       dark
-      width={110}
+      width={140}
     />
   </div>
   <nav class="absolute flex items-center w-fit right-24">

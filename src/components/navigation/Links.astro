@@ -1,7 +1,16 @@
 ---
-const links = ['about', 'projects', 'awards', 'contact']
+const links = ['About', 'Projects', 'Awards']
 ---
 
-<ul class="flex space-x-4 text-sm tracking-wide">
-  {links.map((item) => <li>{item}</li>)}
+<ul class="flex space-x-4 text-lg font-bold tracking-wide">
+  {
+    links.map((item) => (
+      <li class="group">
+        <button class="relative w-fit py-2">
+          <p class="">{item}</p>
+          <span class="left-0 right-0 bottom-0 absolute bg-stone-200 pt-0.5 scale-x-0 group-hover:scale-x-100 transition-all origin-left duration-200 ease-in-out" />
+        </button>
+      </li>
+    ))
+  }
 </ul>
