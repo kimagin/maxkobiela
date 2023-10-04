@@ -1,23 +1,22 @@
 ---
-import "../styles/global.css";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/navigation/Header.astro";
-import Footer from "../components/navigation/Footer.astro";
+import '../styles/global.css'
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/navigation/Header.astro'
+import Footer from '../components/navigation/Footer.astro'
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props as Props;
+const { title } = Astro.props as Props
 ---
 
 <html lang="en">
   <BaseHead {title} />
   <body class="mx-auto relative">
     <Header {title} />
-    <main class="max-w-extreme flex min-h-screen h-screen">
+    <main class="max-w-extreme flex flex-col">
       <slot />
     </main>
     <Footer />
-    <scrip src="../js/global.js"></scrip>
   </body>
 </html>

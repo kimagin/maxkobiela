@@ -1,13 +1,18 @@
 ---
-const slides = await Astro.glob("../../img/slideshow/*.webp");
-const image = slides[0].default;
+const slides = await Astro.glob('../../img/slideshow/*.webp')
 ---
 
-<div class="flex flex-col w-full" x-data="Data()">
+<div
+  class="flex flex-col w-full h-screen"
+  x-data="HSlide">
   <div class="flex-1 overflow-hidden -translate-x-[15%]">
-    <img class="w-full h-full object-cover" src={image} alt="" />
+    <img
+      class="w-full h-full object-cover"
+      src="../../img/slideshow/img--01.webp"
+      alt=""
+    />
   </div>
-  <div class="mx-auto flex flex-col h-[20%] p-6 text-sm items-center">
+  <div class="mx-auto flex flex-col h-[20%] p-6 text-sm items-center h-fit">
     <h1>Kolekcja mebli tapicerowanych <b>TRIPLE</b>, <b>LEFIOLA</b>, PL</h1>
     <h1 x-text="message"></h1>
     <h3 class="text-xs">D. Design/Wzornictwo meblowe</h3>
@@ -16,7 +21,3 @@ const image = slides[0].default;
     </div>
   </div>
 </div>
-
-<script is:inline>
-console.log("This comes from the slides");
-</script>

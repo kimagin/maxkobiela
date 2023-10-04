@@ -120,7 +120,7 @@ const debounce = (func, delay) => {
 // Will run the function, once per specified delay
 const throttle = (func, limit) => {
   let inThrottle
-  return function() {
+  return function () {
     const args = arguments
     const context = this
     if (!inThrottle) {

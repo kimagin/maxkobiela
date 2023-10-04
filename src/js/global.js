@@ -10,21 +10,12 @@ import {
   random, // Random number generator : random(min,max)
 } from './utils'
 
-
 import Alpine from 'alpinejs'
+import heroSlideShow from './heroSlideShow'
+
+Alpine.data('HSlide', heroSlideShow)
+
 window.Alpine = Alpine
-
-function Data() {
-  return {
-    init() {
-      console.log('We have AlpineJS')
-    },
-    message: "This is an Alpine text"
-  }
-}
-
-Alpine.data('Data', Data)
-
 
 const initApp = async () => {
   // 🚩 Global JavaScript ...
@@ -32,4 +23,3 @@ const initApp = async () => {
 }
 
 event(document, 'DOMContentLoaded', initApp)
-
